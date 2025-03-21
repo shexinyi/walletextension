@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best cryptocurrency wallet extensions for your browser. Download MetaMask, Phantom, and Rabby wallet extensions for Chrome, Firefox, Edge, and Brave browsers.">
+    <meta name="keywords" content="wallet extension, cryptocurrency wallet, MetaMask extension, phantom extension, web3 wallet, browser extension">
+    <title>Wallet Extension</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .wallet-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .wallet-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .wallet-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .wallet-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;  /* 添加过渡效果 */
+        }
+
+        /* 添加图标悬停效果 */
+        .wallet-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .wallet-name {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .wallet-description {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .browser-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .browser-link {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.2s;
+        }
+
+        .browser-link:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        .browser-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 0.5rem;
+        }
+
+        /* 添加页脚样式 */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web3 Cryptocurrency Wallet Browser Extensions</h1>
+            <p class="intro">Welcome to WalletExtension, your ultimate treasure trove for Web3 cryptocurrency wallet browser extensions! We have meticulously compiled a comprehensive list of mainstream Web3 wallet extensions for Google, Edge, and Firefox browsers.</p>
+        </header>
+
+        <main class="wallet-grid">
+        </main>
+
+        <!-- 添加页脚 -->
+        <footer>
+            <p>© 2025 Wallet Extension. All rights reserved</p>
+        </footer>
+    </div>
+
+    <script>
+        const wallets = [
+            {
+                name: 'MetaMask',
+                icon: 'https://lh3.googleusercontent.com/EQpmNpyWc98Rhu0bDzuPPS8ivQN2xZoc-saVhYHm5394wqS6eCRI5KyQFtxQf1z-OgS5HYVxvnUX8iv3uWy5jM2maw=s60',
+                description: 'MetaMask is a cryptocurrency wallet for Ethereum and EVM chains, available as a browser extension and mobile app. It offers asset management, DApp interaction (DeFi/NFT), self-custody, multi-chain support, and local security protection.',
+                website: 'https://metamask.io/download',
+                browsers: {
+                    chrome: 'https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=www.walletextension.xyz',
+                    firefox: 'https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/?utm_source=www.walletextension.xyz',
+                    edge: 'https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm?hl=en-US&utm_source=www.walletextension.xyz',
+                    brave: 'https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=www.walletextension.xyz'
+                }
+            },
+            {
+                name: 'Phantom',
+                icon: 'https://lh3.googleusercontent.com/dXvdD2VjLS-imsW8WG2oB3y7sBHhL9gFlv7KZnqZSA9_MU1VROSHRpJidav8-a77uQT1-8X_zK5ibsAC39IFn5tn=s120',
+                description: 'Phantom is a multi-chain crypto wallet focused on the Solana ecosystem (supporting Ethereum, Polygon). It provides asset management, NFT trading, DApp connectivity, and staking features.',
+                website: 'https://phantom.com/download',
+                browsers: {
+                    chrome: 'https://chromewebstore.google.com/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa?utm_source=www.walletextension.xyz',
+                    firefox: 'https://addons.mozilla.org/en-US/firefox/addon/phantom-app/?utm_source=www.walletextension.xyz',
+                    edge: 'https://chromewebstore.google.com/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa?utm_source=www.walletextension.xyz',
+                    brave: 'https://chromewebstore.google.com/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa?utm_source=www.walletextension.xyz'
+                }
+            },
+            {
+                name: 'Rabby',
+                icon: 'https://lh3.googleusercontent.com/-EANsHrMrwTYq1D865xPAuBcU9Qw60Q9Wl_wDVWVpjM5-NQZS0LQqgLsErPJ4XtCnJApuhLTckFPoepLNh_x_b9F2Dc=s60',
+                description: 'Rabby Wallet is a multi-chain crypto wallet designed for Ethereum, Arbitrum, and other EVM chains. It features real-time transaction risk detection, batch signing, and address monitoring.',
+                website: 'https://rabby.io/',
+                browsers: {
+                    chrome: 'https://chromewebstore.google.com/detail/rabby-wallet/acmacodkjbdgmoleebolmdjonilkdbch?utm_source=www.walletextension.xyz',
+                    firefox: 'https://addons.mozilla.org/zh-CN/firefox/addon/rabby-wallet/?utm_source=www.walletextension.xyz'
+                }
+            }
+        ];
+
+        const browserIcons = {
+            chrome: 'https://images.ctfassets.net/clixtyxoaeas/5A57MOZg0UsALlXFC1WEdB/456a2be3307d2cd9f20cabe7661b8364/chrome.svg',
+            firefox: 'https://images.ctfassets.net/clixtyxoaeas/e5gbRFgEYkBnep8J5EiVj/e6820199ca5db364c9f18bb4fbb98b1b/firefox.svg',
+            edge: 'https://images.ctfassets.net/clixtyxoaeas/6E5cXrKBjfuOzjWjSslNk2/3620a161c866d9f3cea450440cbe5430/edge.svg',
+            brave: 'https://images.ctfassets.net/clixtyxoaeas/6dwdYeSpIMH4IMmjjAm2iE/99d4ccb9027bc575c5fcd9cf4c1b0bb6/brave.svg'
+        };
+
+        function createWalletCard(wallet) {
+            const card = document.createElement('div');
+            card.className = 'wallet-card';
+
+            const header = document.createElement('div');
+            header.className = 'wallet-header';
+            
+            // 先创建 nameLink
+            const nameLink = document.createElement('a');
+            nameLink.href = wallet.website;
+            nameLink.className = 'wallet-name';
+            nameLink.textContent = wallet.name;
+            nameLink.target = "_blank";
+
+            // 创建图标链接
+            const iconLink = document.createElement('a');
+            iconLink.href = wallet.website;
+            iconLink.target = "_blank";
+            
+            const icon = document.createElement('img');
+            icon.src = wallet.icon;
+            icon.alt = `${wallet.name} icon`;
+            icon.className = 'wallet-icon';
+
+            // 将图标放入链接中
+            iconLink.appendChild(icon);
+            
+            // 将链接放入header
+            header.appendChild(iconLink);
+            header.appendChild(nameLink);
+
+            const description = document.createElement('p');
+            description.className = 'wallet-description';
+            description.textContent = wallet.description;
+
+            const browserLinks = document.createElement('div');
+            browserLinks.className = 'browser-links';
+
+            for (const [browser, url] of Object.entries(wallet.browsers)) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.className = 'browser-link';
+                link.target = "_blank";  // 添加此行
+                
+                const browserIcon = document.createElement('img');
+                browserIcon.src = browserIcons[browser];
+                browserIcon.alt = `${browser} icon`;
+                browserIcon.className = 'browser-icon';
+                
+                link.appendChild(browserIcon);
+                browserLinks.appendChild(link);
+            }
+
+            card.appendChild(header);
+            card.appendChild(description);
+            card.appendChild(browserLinks);
+
+            return card;
+        }
+
+        const main = document.querySelector('main');
+        wallets.forEach(wallet => {
+            main.appendChild(createWalletCard(wallet));
+        });
+    </script>
+</body>
+</html>

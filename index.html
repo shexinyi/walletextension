@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="we.png">
+    <link rel="icon" type="image/png" href="walletextension.png">
     <meta name="description" content="Discover the best cryptocurrency wallet extensions for your browser. Download MetaMask, Phantom, and Rabby wallet extensions for Chrome, Firefox, Edge, and Brave browsers.">
     <meta name="keywords" content="wallet extension, cryptocurrency wallet, MetaMask extension, phantom extension, web3 wallet, browser extension">
     <title>Wallet Extension</title>
@@ -43,6 +43,28 @@
             color: #666;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        /* 添加搜索框样式 */
+        .search-container {
+            margin: 2rem auto;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #e86f3d;
+            box-shadow: 0 0 0 2px rgba(232, 111, 61, 0.1);
         }
 
         .wallet-grid {
@@ -131,6 +153,11 @@
         <header>
             <h1>Web3 Cryptocurrency Wallet Browser Extensions</h1>
             <p class="intro">Welcome to WalletExtension, your ultimate treasure trove for Web3 cryptocurrency wallet browser extensions! We have meticulously compiled a comprehensive list of mainstream Web3 wallet extensions for Google, Edge, and Firefox browsers.</p>
+            
+            <!-- 添加搜索框 -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search with keywords" class="search-input">
+            </div>
         </header>
 
         <main class="wallet-grid">
@@ -261,6 +288,24 @@
         const main = document.querySelector('main');
         wallets.forEach(wallet => {
             main.appendChild(createWalletCard(wallet));
+        });
+
+        // 添加搜索功能
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const walletCards = document.querySelectorAll('.wallet-card');
+            
+            walletCards.forEach(card => {
+                const name = card.querySelector('.wallet-name').textContent.toLowerCase();
+                const description = card.querySelector('.wallet-description').textContent.toLowerCase();
+                
+                if (name.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>

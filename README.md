@@ -3,7 +3,6 @@ Web3 Cryptocurrency Wallet Browser Extensions List | Web3 加密钱包浏览器�
 
 一个帮助用户发现和安装主流 Web3 加密钱包浏览器扩展的导航网站。
 https://walletextension.xyz/
-www.walletextension.xyz/
 
 ## Introduction | 介绍
 
